@@ -25,7 +25,7 @@ However, since TextBlob only supports English, the texts originally written in I
 
 Once the translation is completed, sentiment labeling is performed on the "english" column using the sentiment method from TextBlob. Based on the polarity values calculated by TextBlob, tweets are categorized into three sentiment types: positive if the polarity is > 0.0, negative if the polarity is < 0.0, and neutral if the polarity is = 0.0. After labeling, the "english" column is deleted as it is no longer needed. Of the total 3,110 tweets analyzed, the results show that 49.8% of tweets have a neutral sentiment, 33.9% have a positive sentiment, and 16.3% have a negative sentiment. These results provide a general overview of how the public talks about NU and Nahdlatul Ulama on social media.
 
-![Result Centiment Analyze](https://github.com/cholilfayyadl/Text-Preprocessing-Sentiment-Analysis/blob/main/Supplementary%20Files/Centiment%20Result.png)
+![Result Centiment Analyze](https://github.com/cholilfayyadl/Text-Preprocessing-Sentiment-Analysis/blob/main/Supplementary%20Files/img/Centiment%20Result.png?raw=true)
 
 ### c. Sentiment Classification with Support Vector Machine (SVM)
 After sentiment analysis, the next step is to classify tweets into sentiment categories using a machine learning algorithm. In this study, the Support Vector Machine (SVM) algorithm is used, which is a popular algorithm for text classification. Before classifying the data, feature weighting is performed using the Term Frequency-Inverse Document Frequency (TF-IDF) method. TF-IDF is used to assign weights to words in tweets based on their frequency in the document and how rare they are across the entire dataset.
