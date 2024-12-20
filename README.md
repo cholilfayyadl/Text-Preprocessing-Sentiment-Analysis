@@ -1,5 +1,7 @@
 # Twitter Analysis of NU and Nahdlatul Ulama: Data Transformation for In-Depth Understanding
 
+![Result Centiment Analyze](https://static.vecteezy.com/system/resources/previews/005/283/055/original/big-data-analysis-concept-in-3d-isometric-design-user-making-marketing-research-works-with-business-statistics-in-online-data-center-web-template-with-people-scene-illustration-for-webpage-vector.jpg)
+
 ## 1. Introduction
 In recent years, social media has become the primary platform for individuals and organizations to interact, share ideas, and shape public opinion. One of the most dominant social media platforms is Twitter, now rebranded as X.com. On this platform, topics related to various social, political, cultural, and religious issues are often discussed. One of the organizations frequently discussed is Nahdlatul Ulama (NU), the largest Islamic organization in Indonesia. As a religious organization, NU has a significant influence on social, cultural, and political life in Indonesia.
 
