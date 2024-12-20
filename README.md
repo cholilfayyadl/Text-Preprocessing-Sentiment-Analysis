@@ -3,7 +3,7 @@
 ## 1. Introduction
 In recent years, social media has become the primary platform for individuals and organizations to interact, share ideas, and shape public opinion. One of the most dominant social media platforms is Twitter, now rebranded as X.com. On this platform, topics related to various social, political, cultural, and religious issues are often discussed. One of the organizations frequently discussed is Nahdlatul Ulama (NU), the largest Islamic organization in Indonesia. As a religious organization, NU has a significant influence on social, cultural, and political life in Indonesia.
 
-It is important to study how the public on social media talks about NU and Nahdlatul Ulama, especially to understand how perceptions of the organization are formed in the digital public sphere. Therefore, this study aims to analyze public sentiment toward NU and Nahdlatul Ulama on X.com. In this study, a total of 3,322 tweets related to NU and Nahdlatul Ulama were collected from May to July 2024. The collected data is analyzed using various data processing techniques and machine learning algorithms to identify public sentiment, conversation trends, and emerging opinions about the organization.
+It is important to study how the public on social media talks about NU and Nahdlatul Ulama, especially to understand how perceptions of the organization are formed in the digital public sphere. Therefore, this study aims to analyze public sentiment toward NU and Nahdlatul Ulama on X.com. In this study, a total of 3,322 tweets related to NU and Nahdlatul Ulama were collected from <b>May to July 2024</b>. The collected data is analyzed using various data processing techniques and machine learning algorithms to identify public sentiment, conversation trends, and emerging opinions about the organization.
 
 Through this analysis, deeper insights are expected regarding how the public views NU and Nahdlatul Ulama and how social media platforms play a role in shaping these perceptions. The analysis process involves several key stages, including data cleaning, sentiment analysis, and data classification using the Support Vector Machine (SVM) algorithm.
 
@@ -25,7 +25,9 @@ However, since TextBlob only supports English, the texts originally written in I
 
 Once the translation is completed, sentiment labeling is performed on the "english" column using the sentiment method from TextBlob. Based on the polarity values calculated by TextBlob, tweets are categorized into three sentiment types: positive if the polarity is > 0.0, negative if the polarity is < 0.0, and neutral if the polarity is = 0.0. After labeling, the "english" column is deleted as it is no longer needed. Of the total 3,110 tweets analyzed, the results show that 49.8% of tweets have a neutral sentiment, 33.9% have a positive sentiment, and 16.3% have a negative sentiment. These results provide a general overview of how the public talks about NU and Nahdlatul Ulama on social media.
 
-Sentiment Classification with Support Vector Machine (SVM)
+![Result Centiment Analyze](https://github.com/cholilfayyadl/Text-Preprocessing-Sentiment-Analysis/blob/main/Supplementary%20Files/Centiment%20Result.png)
+
+### c. Sentiment Classification with Support Vector Machine (SVM)
 After sentiment analysis, the next step is to classify tweets into sentiment categories using a machine learning algorithm. In this study, the Support Vector Machine (SVM) algorithm is used, which is a popular algorithm for text classification. Before classifying the data, feature weighting is performed using the Term Frequency-Inverse Document Frequency (TF-IDF) method. TF-IDF is used to assign weights to words in tweets based on their frequency in the document and how rare they are across the entire dataset.
 
 After feature weighting, the data is divided into two parts: training data and test data. This division is done with several proportion comparisons, namely 20:80, 30:70, and 40:60, referring to the division between training and test data. The division is done using the train_test_split function from the sklearn library. After the data is divided, the SVM model is trained with a linear kernel to classify sentiment based on the weighted features.
@@ -36,7 +38,9 @@ In the second test with a 30:70 ratio, the model's accuracy slightly decreased t
 
 In the final test with a 40:60 ratio, the model recorded an accuracy of 61.73%. Out of 1,236 test data, 763 predictions were correct, with a precision of 62.76%, recall of 61.73%, and F1 score of 59.53%. The confusion matrix showed that the model was more accurate in predicting neutral sentiment, but had a higher error rate for negative and positive sentiments.
 
-### c. Model Performance Evaluation
+![Data Confusion20x80](https://github.com/cholilfayyadl/Text-Preprocessing-Sentiment-Analysis/blob/main/Supplementary%20Files/Data%20Test/confusion%20matrix-20%25-80%25.png)
+
+### d. Model Performance Evaluation
 Overall, the SVM model used in this study showed a tendency to perform better in recognizing neutral sentiment compared to negative and positive sentiments. This may be because neutral sentiment is more frequently found in the dataset and is easier to predict. However, the model's difficulty in distinguishing between negative and positive sentiment highlights the need for further improvements in data preprocessing, feature selection, and model parameter tuning. Nonetheless, the results of this analysis provide valuable insights into how the public interacts with and forms opinions about NU and Nahdlatul Ulama on Twitter.
 
 ## 3. Conclusion
